@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Comece a utilizar Computação em Nuvem hoje!</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/sky.css">
@@ -254,6 +254,307 @@ Problemas!
 					<img  class="fragment" width="70%" src="img/disaster.jpg"/>
 				</section>
 
+
+				<section>
+					<h4>Escalabilidade Vertical x Horizontal</h4>
+					<div class="columns-slide">
+						<br />
+						<div class="left-slide" style="width: 50%">
+							<img  class="fragment" height="400" src="img/vertical.png" alt="you" />
+						</div>
+						<div class="right-slide" style="width: 50%">
+							<img  class="fragment" height="400" src="img/horizontal.png" alt="you" />
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h4>Te convenci?</h4>
+					<img  class="fragment" width="70%" src="img/still-not-convinced_image.gif"/>
+				</section>
+
+				<section>
+					<h4>AWS - Amazon Web Services</h4>
+					<img width="40%" src="img/aws.png" alt="" style="border: 0px; box-shadow: none;">
+					<hr />
+					<div style="float:right">
+						<img width="128" src="img/netflix.png" alt="">
+						<img height="60" src="img/slack.jpg" alt="">
+						<img height="60" src="img/wemotors.png" alt="">
+						<img height="60" src="img/globo.png" alt="">
+						<img height="60" src="img/NuBank.png" alt="">
+						<img height="60" src="img/foursquare.png" alt="">
+						<img height="60" src="img/nasa.png" alt="">
+						<img height="60" src="img/airbnb.png" alt="">
+					</div>
+				</section>
+
+				<section>
+					<h4>Amazon Elastic Compute Cloud - EC2</h4>
+					<img  class="fragment" width="60%" src="img/ec2.jpg"/>
+					<ul>
+						<li class="fragment">Diferentes níveis de recursos de hardware.</li>
+						<li class="fragment">Pagamento por utilização, redimensionamento.</li>
+						<li class="fragment">Escalabilidade infinita*.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h4>Auto Scaling</h4>
+					<img  class="fragment" width="60%" src="img/autoscaling.png"/>
+				</section>
+
+				<section>
+					<h4>Elastic Load Balancer- ELB</h4>
+					<img  class="fragment" src="img/elb.png"/>
+				</section>
+
+				<section>
+					<h4>Simple Storage Service - S3</h4>
+					<img  class="fragment" src="img/s3.gif"/>
+				</section>
+
+				<section>
+					<h4>Relational Database Service - RDS</h4>
+					<img  class="fragment" src="img/s3.png"/>
+				</section>
+
+				<section>
+					<h4>CloudFront</h4>
+					<img  class="fragment" width="50%" src="img/cloudfront.gif"/>
+				</section>
+
+				<section>
+					<h4>Outros serviços...</h4>
+					<img  class="fragment" src="img/amazonservices.png"/>
+				</section>
+
+				<section>
+					<h4>Outros provedores...</h4>
+					<img  class="fragment" src="img/providers.png"/>
+				</section>
+
+				<section>
+					<h3>Estudo de Caso</h3>
+					<ul  style="font-size: 0.8em">
+						<li class="fragment">Um novo cliente para um sistema legado.</li>
+						<li class="fragment">O sistema iniciado em 2004, e sem equipe dedicada há 2 anos.</li>
+						<li class="fragment">Média de usuários era de 500 usuários, no máximo 1000.</li>
+						<li class="fragment">O novo cliente possuia 80000 funcionários</li>
+						<ul class="fragment">
+							<li>Origados a utilizar o sistema.</li>
+							<li  class="fragment">Mensalmente</li>
+						</ul>
+					</ul>
+				</section>
+
+				<section>
+					<h4>Estudo de Caso</h4>
+					<p>O que fazer?</p>
+					<ul  style="font-size: 0.8em">
+						<li class="fragment">Aumentar o hardware?</li>
+						<li class="fragment">Refatorar o código?</li>
+						<li class="fragment">Ter fé?</li>
+					</ul>
+					<hr class="fragment"/>
+					<p class="fragment">Estratégia:</p>
+
+					<ul  style="font-size: 0.8em">
+						<li class="fragment">Realizar testes de carga e coletar métricas.</li>
+						<li class="fragment">Refatorar apenas <b>pontos específicos</b>.</li>
+						<li class="fragment">Adicionar camadas de cache.</li>
+					</ul>
+					<hr class="fragment"/>
+					<h5 class="fragment">Os resultados não foram bons o bastante....</h5>
+				</section>
+
+				<section>
+					<h4>Estudo de Caso</h4>
+					<p>Cenário</p>
+					<ul  style="font-size: 0.8em">
+						<li class="fragment">JBOSS 4</li>
+						<li class="fragment">Java EE</li>
+						<li class="fragment">Cache em memória.</li>
+						<li class="fragment">Arquivos em disco.</li>
+						<li class="fragment">16GB de RAM e 4 núcleos...</li>
+					</ul>
+					<hr class="fragment"/>
+					<p class="fragment">Estratégia:</p>
+					<h5 class="fragment">Vamos clusterizar!</h5>
+				</section>
+
+				<section>
+					<h4>Performance <i>versus</i> Escalabilidade</h4>
+					<img   width="80%" class="fragment" src="img/space-car-bus-bike.jpg"/>
+				</section>
+
+
+				<section>
+					<h4>Como era nossa infraestrutura?</h4>
+					<div class="columns-slide">
+						<div class="left-slide" style="width: 50%">
+							<img  class="fragment"  src="img/sc1.png" alt="you" />
+						</div>
+						<div class="right-slide" style="width: 50%">
+							<br />
+							<ul  style="font-size: 0.8em">
+								<li class="fragment">Windows Server</li>
+								<li class="fragment">Jboss 4.2</li>
+								<li class="fragment">Java 6</li>
+								<li class="fragment">Muitos recursos</li>
+								<li class="fragment">SGBD SQL Server 2008</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h4>Passo 1: Precisamos rodar máquinas menores para clusterizar.</h4>
+					<div class="columns-slide">
+						<div class="left-slide" style="width: 50%">
+							<img  class="fragment"  src="img/sc2.png" alt="you" />
+						</div>
+						<div class="right-slide" style="width: 50%">
+							<br />
+							<ul  style="font-size: 0.8em">
+								<li class="fragment">Linux baseado em CentOS</li>
+								<li class="fragment">Tomcat 7</li>
+								<li class="fragment">Java 7</li>
+								<li class="fragment">Mantivemos o SQL Server 2008</li>
+								<li class="fragment">Máquina quase 4x mais barata.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h4>Passo 2: Remover Server Affinity I.</h4>
+					<div class="columns-slide">
+						<div class="left-slide" style="width: 50%; padding-top: 50px">
+							<img  class="fragment"  src="img/sc4.png" alt="you" />
+						</div>
+						<div class="right-slide" style="width: 50%">
+							<br />
+							<ul  style="font-size: 0.8em">
+								<li class="fragment">Etapa com mais mudanças em código.</li>
+								<ul>
+									<li class="fragment">Remover variáveis mutáveis estáticas.</li>	
+									<li class="fragment">Remover caches da memória/disco local.</li>
+									<li class="fragment">Remover configurações locais.</li>
+								</ul>
+								<li class="fragment">Utilizamos o ElastiCache.</li>
+								<ul>
+									<li class="fragment">Cache em memória.</li>	
+									<li class="fragment">Sessões do Tomcat.</li>
+									<li class="fragment">Cache N2 do Hibernate.</li>
+								</ul>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h4>Passo 2: Remover Server Affinity II.</h4>
+					<div class="columns-slide">
+						<div class="left-slide" style="width: 50%">
+							<img  class="fragment"  src="img/sc3.png" alt="you" />
+						</div>
+						<div class="right-slide" style="width: 50%">
+							<br />
+							<ul  style="font-size: 0.8em">
+								<li class="fragment">Utilizamos S3</li>
+								<ul>
+									<li class="fragment">Arquivos de usuário.</li>	
+									<li class="fragment">Fotos.</li>
+									<li class="fragment">Configuração.</li>
+									<li class="fragment">Scripts.</li>
+									<li class="fragment">Pacotes da aplicação.</li>
+									<li class="fragment">Logs.</li>
+								</ul>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h4>Passo 3: Enfim o cluster</h4>
+					<br />
+					<div class="columns-slide">
+						<div class="left-slide" style="width: 50%">
+							<img  class="fragment"  src="img/sc5.png" alt="you" />
+						</div>
+						<div class="right-slide" style="width: 50%">
+							<ul  style="font-size: 0.8em">
+								<li class="fragment">Adicionar um Load Balancer.</li>
+								<li class="fragment">Criamos 3 instâncias.</li>
+								<li class="fragment">Balanceamento por Round-Robin (RR).</li>
+							</ul>
+							<hr class="fragment"/>
+							<h5 class="fragment">Primeiros resultados significativos...</h5>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h4>Passo 4: Adicionando elasticidade ao Cluster</h4>
+					<div class="columns-slide">
+						<div class="left-slide" style="width: 50%">
+							<img  class="fragment"  src="img/sc6.png" alt="you" />
+						</div>
+						<div class="right-slide" style="width: 50%">
+							<br />
+							<ul  style="font-size: 0.6em">
+								<li class="fragment">Criamos um Auto-Scaling Group</li>
+								<li class="fragment">Métricas enviadas para o Cloud-Watch.</li>
+								<li class="fragment">Criamos critérios para UP e DOWN.</li>
+								<li class="fragment">O Cluster final tem entre 1 e 3 máquinas.</li>
+							</ul>
+						</div>
+					</div>
+
+					<div style="clear:both"/>
+						<hr class="fragment"/>
+						<h5 class="fragment">Eficiência de custo!</h5>
+				</section>
+
+				<section>
+					<h3>Benefícios Adicionais</h3>
+					<ul>
+						<li class="fragment">Simplificação da operação de plataforma.</li>
+						<li class="fragment">Facilitação dos processos de backup.</li>
+						<li class="fragment">Possibilidade de realizar deploys RED-GREEN.</li>
+						<li class="fragment">Custo baixo na maior parte do mês.</li>
+						<li class="fragment">Possibilidade de escalar além dos 80 mil usuários sem alterações.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Limitações</h3>
+					<ul>
+						<li class="fragment">Ainda temos pontos únicos de falha.</li>
+						<li class="fragment">SGBD passa a ser um limitador - replicação de leitura.</li>
+						<li class="fragment">Maior complexidade no desenvolvimento.</li>
+						<li class="fragment">Relatórios!!!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Lições Aprendidas</h3>
+					<ul>
+						<li class="fragment">Não é possível possível conduzir um projeto baseado em hipóteses.</li>
+						<ul>
+							<li class="fragment">Testes de carga com objetivos pré-definidos.</li>
+							<li class="fragment">Ferramentas de monitoramento da aplicação e dos recursos.</li>
+						</ul>
+						<li class="fragment">É preciso desenvolver e incentivar o conhecimento em Sistemas Distribuídos.</li>
+						<li class="fragment">Computação em Núvem não é assunto para grandes Players!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Passos para criar minha próxima aplicação na núvem:</h3>
+					?
+				</section>
 			</div>
 		</div>
 
