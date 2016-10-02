@@ -7,7 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/simple.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -20,15 +20,240 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<style>
+			.columns-slide {
+				width: 100%; 
+				margin:0px auto;
+			}
+
+			.left-slide {
+				width: 30% ; 
+				float:left; 
+				margin: 0.5%;
+			}
+
+			.right-slide {
+				width: 65% ; 
+				float:right; 
+				margin: 0.5%;
+			}
+
+			.wall {
+				width: 100%; 
+				margin:0px auto;
+				background-color: #F8F3D6; 
+				padding: 10px !important; 
+				padding-top: 30px !important;
+			}
+
+
+			.withmargin {
+				background: none repeat scroll 0 0 rgba(255, 255, 255, 0.12);
+			    border: 4px solid #333333;
+			    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+			    margin: 15px 0;
+			    transition: all 0.2s linear 0s;
+			}
+		</style>
 	</head>
 	<body>
+<!--
+O que é a núvem?
+Evolução dos servidores de internet
+IaaS
+PaaS
+SaaS
+Provedores de Núvem
+Vantagens de se criar uma aplicação na núvem?
+	Infraestrutura elástica
+	Escalabilidade vertical x horizontal
+	Segurança
+	Alta disponibilidade
+	Replicação
+
+Serviços de Núvem
+	EC2
+	ELB
+	S3
+	CloudFront
+	RDS
+	...
+
+Estudo de Caso
+	Movendo uma aplicação existente para núvem
+	Server Afinity
+		Disco
+		Memória
+		Configurações Fixas
+	Balanceamento de carga
+	Sessão distribída
+	Processo de deploy
+	Banco de Dados
+		Ponto Único de Falha
+	Monitoramento
+	Logs
+	
+O que eu preciso fazer para criar a minha aplicação na núvem?
+
+Problemas!
+	Programando para falha
+
+-->
 		<div class="reveal">
 			<div class="slides">
+
 				<section>
-					<h1>Slide 1</h1>
-					<p>Bla bla bla</p>
+					<h2>Comece a utilizar Computação em Nuvem <u>hoje!</u></h2>
+					<hr />
+					<p>
+						<small>Welington Veiga</a> / <a href="http://twitter.com/welingtonveiga">@welingtonveiga</a></small>
+					</p>
 				</section>
-				<section>Slide 2</section>
+
+				<section>
+					<h2>Sobre mim...</h2>
+					<div class="columns-slide">
+						<br />
+						<div class="left-slide">
+							<img width="320" src="img/me.jpg" alt="Welington Veiga">
+						</div>
+						<div class="right-slide" style="font-size: 0.8em">
+							<ul>
+								<li>Mestre em Ciência da Computação pela UFJF</li>
+								<li>Gerente de Desenvolvimento na AfferoLab</li>
+								<li>Professor na Faculdade Metodista Granbery</li>
+								<li>Certified ScrumMaster pela Scrum Alliance.</li>
+							</ul>
+							<div style="float:right">
+								<img width="320" src="img/afferolab.png" alt="">
+								<img width="110" src="img/scm.jpg" alt="">
+							</div>
+						</div>
+					</div>
+					<div style="clear:both"/>
+					
+				</section>
+        
+				<section>
+					<h3>E você?</h3>
+					<div class="columns-slide">
+						<br />
+						<div class="left-slide">
+							<img height="400" src="img/who.png" alt="you" />
+						</div>
+						<div class="right-slide" >
+							<ul>
+								<li class="fragment">Está em qual período?</li>
+								<li class="fragment">Trabalha com TI?</li>
+								<li class="fragment">Já ouviu falar em <srong>Computação em Nuvem</strong>?</li>
+								<li class="fragment">Conhece a Amazon AWS?</li>
+							</ul>
+							<br />
+							<br />
+							<h3 class="fragment">Bem vindo a bordo!</h3>
+						</div>
+					</div>
+				</section>
+
+				<!-- PARTE I Introdução -->
+
+				<section>
+					<h3>Afinal, o que é a Nuvem?</h3>
+					<p class="fragment"> <i>"Computação em nuvem é o fornecimento de serviços de computação – servidores, armazenamento, bancos de dados, rede, software, análise e muito mais – pela Internet (“a nuvem”)"</i></p>
+					<p class="fragment"> Microsoft</p>
+				</section>
+
+				<section>
+					<h3>Afinal, o que é a Nuvem?</h3>
+					<img class="fragment" src="img/computacao-nas-nuvens.gif" alt="you" />
+				</section>
+
+				<section>
+					<h3>Serviços disponíveis na núvem...</h3>
+					<img class="fragment" src="img/cloud.jpg" alt="you" />
+				</section>
+
+				<section>
+					<h3>Onde está a núvem?</h3>
+					<img class="fragment" src="img/managed-providers.jpg"/>
+				</section>
+
+				<section>
+					<h4>Isso não é a mesma coisa que virtualização?</h4>
+					<strong class="fragment">Não!</strong><br />
+					<img width="60%" class="fragment" src="img/cloudxvirtualization.png"/>
+				</section>	
+
+				<section>
+					<h4>Infraestrutra como Serviço</h4>
+					<img class="fragment" src="img/iaas.png"/>
+					<ul>
+						<li class="fragment">IaaS - Infraestructure as a Service</li>
+						<li class="fragment">Recursos como espaço em disco, rede, processamento.</li>
+						<li class="fragment">Alto nível de flexibilidade.</li>
+						<li class="fragment">Gerenciamento de assemelha a infra local.</li>
+					</ul>
+				</section>				
+
+				<section>
+					<h4>Plataforma como Serviço</h4>
+					<img class="fragment" src="img/paas.png"/>
+					<ul>
+						<li class="fragment">PaaS - Platform as a Service</li>
+						<li class="fragment">Não é necessário se preocupar com o hardware ou SO</li>
+						<li class="fragment">Serviços a partir do qual se constrói as Aplicações.</li>
+						<li class="fragment">Computação, armazenamento, rede gerenciados.</li>
+					</ul>
+				</section>		
+
+				<section>
+					<h4>Software como Serviço</h4>
+					<img class="fragment" src="img/saas.png"/>
+					<ul>
+						<li class="fragment">SaaS - Software as a Service</li>
+						<li class="fragment">Produtos completos para se integrarem às soluções.</li>
+						<li class="fragment">Não pe necessário saber nada sobre a infraestrutura subjacente.</li>
+						<li class="fragment">Webmail</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h4>Por que utilizar cloud computing na minha próxima aplicação?</h4>
+					<img src="img/doubts.jpg"/>
+				</section>
+
+				<section>
+					<h4>Motivo 1: Custo</h4>
+					<img  class="fragment" width="80%" src="img/cost.jpg"/>
+				</section>
+
+				<section>
+					<h4>Motivo 2: Velocidade</h4>
+					<img  class="fragment" width="70%" src="img/speed.png"/>
+				</section>
+
+				<section>
+					<h4>Motivo 3: Escalabilidade</h4>
+					<img  class="fragment" width="70%" src="img/scalability.gif"/>
+				</section>
+
+				<section>
+					<h4>Motivo 4: Produtividade</h4>
+					<img  class="fragment" width="70%" src="img/productivity.png"/>
+				</section>
+
+				<section>
+					<h4>Motivo 5: Desempenho</h4>
+					<img  class="fragment" width="70%" src="img/datacenter.jpg"/>
+				</section>
+
+				<section>
+					<h4>Motivo 6: Confiabilidade</h4>
+					<img  class="fragment" width="70%" src="img/disaster.jpg"/>
+				</section>
+
 			</div>
 		</div>
 
@@ -36,11 +261,8 @@
 		<script src="js/reveal.js"></script>
 
 		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
-
-				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
